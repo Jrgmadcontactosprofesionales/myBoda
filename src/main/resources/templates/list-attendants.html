@@ -1,0 +1,66 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+<!--		TODO: descargar al proyecto-->
+<!--		TODO: ¿crear un nav?-->
+
+		<link rel="stylesheet" 
+			type="text/css" 
+			href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css" />
+		<link rel="stylesheet" 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+			crossorigin="anonymous" />
+		<title>Asistentes</title>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Asistentes</h2>
+			<hr/>
+			<a th:href="@{/nuevoAsistente}" class="btn btn-primary">Añadir asistente</a>
+			<br/><br/>
+			<table class="table table-bordered table-striped" id="attendantTable">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Fecha de nacimiento</th>
+						<th>Teléfono</th>
+						<th>¿Asistencia?</th>
+						<th>Peticiones especiales</th>
+						<th>Confirmación de peticiones especiales</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="attendant: ${attendants}">
+						<td th:text="${attendant.name}" />
+						<td th:text="${attendant.surname}" />
+						<td th:text="${attendant.dob}" />
+						<td th:text="${attendant.ph}" />
+						<td th:text="${attendant.attendingStatus}" />
+						<td th:text="${attendant.specialRequirement}" />
+						<td th:text="${attendant.specialRequirementStatus}" />
+						<td>
+							<a th:href="@{/editarAsistente(attendantId=${attendant.id})}" class="btn btn-info">Actualizar</a>
+							<a th:href="@{/eliminarAsistente(attendantId=${attendant.id})}" class="btn btn-danger ml-2">Eliminar</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
+<!--		TODO: sacar a archivo-->
+		<script>
+			$(document).ready(function() {
+				$("#attendantTable").DataTable({
+						'aoColumnDefs': [{
+        				'bSortable': false,
+        				'aTargets': [-1] /* 1st one, start by the right */
+    				}]
+				});
+			})
+		</script>
+	</body>
+</html>
