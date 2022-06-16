@@ -4,7 +4,10 @@ import com.jorgealvarez.myboda.model.Attendant;
 import com.jorgealvarez.myboda.repository.AttendantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import static com.jorgealvarez.myboda.service.getAuthorityService.isAdmin;
@@ -51,9 +54,9 @@ public class AttendantController {
         return modelAndView;
     }
 
-    //TODO JORGE PEDRO: no funciona el método post y no se puede editar
-    @PutMapping("/guardar-cambios-invitado")
-    public String saveEditedAttendant(@RequestBody Attendant attendant) {
+    //TODO JORGE PEDRO: no funciona el método post. Dejado como put para salir del paso no se puede editar
+    @PostMapping("/guardar-cambios-invitado")
+    public String saveEditedAttendant(@ModelAttribute Attendant attendant) {
         Attendant attendantTemp = attendantRepository.findById(attendant.getId()).get();
         attendantTemp.setName(attendant.getName());
         attendantTemp.setSurname(attendant.getSurname());

@@ -12,7 +12,7 @@
     <h2>Modifica los datos del invitado</h2>
     <hr/>
     <div class="row justify-content-center">
-        <form class="form-group form-inline" method="PUT" th:action="@{/guardar-cambios-invitado}"
+        <form class="form-group form-inline" method="post" th:action="@{/guardar-cambios-invitado}"
               th:object="${attendant}">
             <input class="form-control col-4 mb-4" placeholder="Nombre" th:field="*{name}"
                    type="text"/>
