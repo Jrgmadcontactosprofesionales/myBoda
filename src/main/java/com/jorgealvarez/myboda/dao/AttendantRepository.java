@@ -1,7 +1,6 @@
 package com.jorgealvarez.myboda.dao;
 
 import com.jorgealvarez.myboda.model.Attendant;
-import com.jorgealvarez.myboda.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 //TODO: ¿crear repositorio genérico?

@@ -1,9 +1,7 @@
 package com.jorgealvarez.myboda.controller;
 
 import com.jorgealvarez.myboda.dao.AttendantRepository;
-import com.jorgealvarez.myboda.dao.EmployeeRepository;
 import com.jorgealvarez.myboda.model.Attendant;
-import com.jorgealvarez.myboda.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
