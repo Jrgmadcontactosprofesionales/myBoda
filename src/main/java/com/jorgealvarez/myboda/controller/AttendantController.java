@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import static com.jorgealvarez.myboda.service.loggedUserService.getLoggedUserService;
+
 @Controller
 public class AttendantController {
 	//TODO: ¿crear métodos genéricos?
@@ -33,6 +35,7 @@ public class AttendantController {
 	
 	@PostMapping("/guardarNuevoAsistente")
 	public String saveAttendant (@ModelAttribute Attendant attendant) {
+		attendant.setLoggedUser(getLoggedUserService());
 		attendantRepository.save(attendant);
 		return "redirect:/asistentes";
 	}

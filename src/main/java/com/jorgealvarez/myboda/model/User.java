@@ -1,9 +1,12 @@
 package com.jorgealvarez.myboda.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Collection;
 
 //TODO: change variables
+@Data
 @Entity
 @Table(name =  "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
