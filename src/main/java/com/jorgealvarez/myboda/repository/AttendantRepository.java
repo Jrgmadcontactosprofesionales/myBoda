@@ -1,4 +1,4 @@
-package com.jorgealvarez.myboda.dao;
+package com.jorgealvarez.myboda.repository;
 
 import com.jorgealvarez.myboda.model.Attendant;
 import org.springframework.data.jpa.repository.JpaRepository;

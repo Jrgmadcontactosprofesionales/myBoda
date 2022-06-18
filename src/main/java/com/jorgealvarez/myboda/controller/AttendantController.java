@@ -1,6 +1,6 @@
 package com.jorgealvarez.myboda.controller;
 
-import com.jorgealvarez.myboda.dao.AttendantRepository;
+import com.jorgealvarez.myboda.repository.AttendantRepository;
 import com.jorgealvarez.myboda.model.Attendant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,14 +18,14 @@ public class AttendantController {
 	
 	@GetMapping({"/asistentes"})
 	public ModelAndView getAttendants() {
-		ModelAndView modelAndView = new ModelAndView("list-attendants");
+		ModelAndView modelAndView = new ModelAndView("/attendants/list-attendants");
 		modelAndView.addObject("attendants", attendantRepository.findAll());
 		return modelAndView;
 	}
 	
 	@GetMapping("/nuevoAsistente")
 	public ModelAndView addAttendant() {
-		ModelAndView modelAndView = new ModelAndView("add-attendant");
+		ModelAndView modelAndView = new ModelAndView("/attendants/add-attendant");
 		Attendant attendant = new Attendant();
 		modelAndView.addObject("attendant", attendant);
 		return modelAndView;
@@ -39,7 +39,7 @@ public class AttendantController {
 	
 	@GetMapping("/editarAsistente")
 	public ModelAndView editAttendant (@RequestParam int attendantId) {
-		ModelAndView modelAndView = new ModelAndView("edit-attendant");
+		ModelAndView modelAndView = new ModelAndView("/attendants/add-attendant");
 		Attendant attendant = attendantRepository.findById(attendantId).get();
 		modelAndView.addObject("attendant", attendant);
 		return modelAndView;

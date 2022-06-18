@@ -4,38 +4,30 @@
 			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
 			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
 			crossorigin="anonymous" />
-		<title>Añadir asistente</title>
+		<title>Editar asistente</title>
 	</head>
 	<body>
 		<div class="container">
-			<h2>Añadir asistente</h2>
+			<h2>Añade o edita un asistente</h2>
 			<hr/>
 			<form th:action="@{/guardarNuevoAsistente}" th:object="${attendant}" method="POST">
 				<input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Nombre" />
 				<input type="text" th:field="*{surname}" class="form-control col-4 mb-4" placeholder="Apellidos" />
 				<input type="date" th:field="*{dob}" class="form-control col-4 mb-4" placeholder="Fecha de nacimiento" />
 				<input type="text" th:field="*{ph}" class="form-control col-4 mb-4" placeholder="Teléfono" />
-<!--				<input type="text" th:field="*{attendingStatus}" class="form-control col-4 mb-4" placeholder="¿Asistencia?" />-->
-
 				<select class="input-group form-control col-4 mb-4" name="attendingStatus">
 					<option value="" disabled selected hidden>Asistencia</option>
 					<option th:each="attendingStatusOpt : ${T(com.jorgealvarez.myboda.model.Status).values()}"
 							th:value="${attendingStatusOpt}" th:text="${attendingStatusOpt.displayValue}"></option>
 				</select>
-
-				<!--<select name="color">
-					<option th:each="colorOpt : ${T(com.baeldung.thymeleaf.model.Color).values()}"
-							th:value="${colorOpt}" th:text="${colorOpt}"></option>
-				</select>-->
 				<input type="text" th:field="*{specialRequirement}" class="form-control col-4 mb-4" placeholder="Peticiones especiales"/>
-
 				<button type="submit" class="btn btn-primary col-2">Guardar</button>
 				<input type="hidden" th:field="*{id}" />
-				
 			</form>
 			<hr/>
 			<a th:href="@{/asistentes}">Volver a la lista</a>
 		</div>
-		
+<!--		TODO: intentar hacer que se haga dinámico title y h2. Si no, eliminar el scrip-->
+		<script src="js/javascript.js"/></script>
 	</body>
 </html>
