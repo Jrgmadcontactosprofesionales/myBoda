@@ -1,7 +1,7 @@
 package com.jorgealvarez.myboda.controller;
 
-import com.jorgealvarez.myboda.repository.AttendantRepository;
 import com.jorgealvarez.myboda.model.Attendant;
+import com.jorgealvarez.myboda.repository.AttendantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import static com.jorgealvarez.myboda.service.getAuthorityService.isAdmin;
 import static com.jorgealvarez.myboda.service.loggedUserService.getLoggedUserService;
 
 @Controller
@@ -21,7 +22,12 @@ public class AttendantController {
 	@GetMapping({"/asistentes"})
 	public ModelAndView getAttendants() {
 		ModelAndView modelAndView = new ModelAndView("/attendants/list-attendants");
-		modelAndView.addObject("attendants", attendantRepository.findAll());
+		String loggedUser = getLoggedUserService();
+		if (isAdmin()) {
+			modelAndView.addObject("attendants", attendantRepository.findAll());
+		} else {
+		modelAndView.addObject("attendants", attendantRepository.findByloggedUserContaining(getLoggedUserService()));
+		}
 		return modelAndView;
 	}
 	
