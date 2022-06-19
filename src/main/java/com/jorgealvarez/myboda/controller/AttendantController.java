@@ -31,7 +31,7 @@ public class AttendantController {
 		return modelAndView;
 	}
 	
-	@GetMapping("/nuevoAsistente")
+	@GetMapping("/nuevo-asistente")
 	public ModelAndView addAttendant() {
 		ModelAndView modelAndView = new ModelAndView("/attendants/add-attendant");
 		Attendant attendant = new Attendant();
@@ -39,14 +39,14 @@ public class AttendantController {
 		return modelAndView;
 	}
 	
-	@PostMapping("/guardarNuevoAsistente")
+	@PostMapping("/guardar-nuevo-asistente")
 	public String saveAttendant (@ModelAttribute Attendant attendant) {
 		attendant.setLoggedUser(getLoggedUserService());
 		attendantRepository.save(attendant);
 		return "redirect:/asistentes";
 	}
 	
-	@GetMapping("/editarAsistente")
+	@GetMapping("/editar-asistente")
 	public ModelAndView editAttendant (@RequestParam int attendantId) {
 		ModelAndView modelAndView = new ModelAndView("/attendants/add-attendant");
 		Attendant attendant = attendantRepository.findById(attendantId).get();
@@ -54,7 +54,7 @@ public class AttendantController {
 		return modelAndView;
 	}
 	
-	@GetMapping("/eliminarAsistente")
+	@GetMapping("/eliminar-asistente")
 	public String deleteAttendant(@RequestParam int attendantId) {
 		attendantRepository.deleteById(attendantId);
 		return "redirect:/asistentes";
