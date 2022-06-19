@@ -8,7 +8,7 @@
 		<div class="container">
 			<h2>Añade o edita un asistente</h2>
 			<hr/>
-			<form th:action="@{/guardarNuevoAsistente}" th:object="${attendant}" method="POST">
+			<form th:action="@{/guardar-nuevo-asistente}" th:object="${attendant}" method="POST">
 				<input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Nombre" />
 				<input type="text" th:field="*{surname}" class="form-control col-4 mb-4" placeholder="Apellidos" />
 				<input type="date" th:field="*{dob}" class="form-control col-4 mb-4" placeholder="Fecha de nacimiento" />
