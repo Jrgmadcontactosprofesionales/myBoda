@@ -1,142 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogDeCafé</title>
-    <meta name="description" content="Página web de blog de café">
+    <div th:insert="fragments/head :: head"></div>
+    <title>La boda</title>
+    <!--    Styles non linkable by thymeleaf-->
+    <link as="style" href="css/style.css" rel="preload">
+    <link href="css/style.css" rel="stylesheet">
 
-    <!-- Prefetch -->
-    <link rel="prefetch" href="nosotros.html" as="document">
-
-    <!-- Preload -->
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="margin-top-to-nav-on-body">
+<div th:insert="fragments/header :: header"></div>
+<header class="header">
 
-    <header class="header">
-
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-                </a>
-
-                <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
-            </div>
+    <div class="contenedor">
+        <div class="barra">
+            <h1 class="logo logo__nombre no-margin centrar-texto">Nuestra <span class="logo__bold">Boda</span></h1>
         </div>
-
-        <div class="header__texto">
-            <h2 class="no-margin">Blog de café con consejos y cursos</h2>
-            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
-        </div>
-    </header>
-
-    <div class="contenedor contenido-principal">
-        <main class="blog">
-            <h3>Nuestro Blog</h3>
-
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <picture>
-                        <source loading="lazy"  srcset="img/blog1.webp" type="image/webp">
-                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog"> 
-                    </picture>
-                </div>
-
-                <div class="entrada__contenido">
-                    <h4 class="no-margin">Tipos de Grano de Café</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
-                </div>
-            </article>
-
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <picture>
-                        <source loading="lazy"  srcset="img/blog2.webp" type="image/webp">
-                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog"> 
-                    </picture>
-                </div>
-
-                <div class="entrada__contenido">
-                    <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
-                </div>
-            </article>
-
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <picture>
-                        <source loading="lazy"  srcset="img/blog3.webp" type="image/webp">
-                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog"> 
-                    </picture>
-                </div>
-
-                <div class="entrada__contenido">
-                    <h4 class="no-margin">Beneficios del Café</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
-                </div>
-            </article>
-        </main>
-        <aside class="sidebar">
-            <h3>Nuestros Cursos y Talleres</h3>
-
-            <ul class="cursos no-padding">
-                <li class="widget-curso">
-                    <h4 class="no-margin">Técnicas de Extracción de Café</h4>
-                    <p class="widget-curso__label">Precio: 
-                        <span class="widget-curso__info">Gratis</span>
-                    </p>
-                    <p class="widget-curso__label">Cupo: 
-                        <span class="widget-curso__info">20</span>
-                    </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
-                </li>
-
-                <li class="widget-curso">
-                    <h4 class="no-margin">4 Recetas de Café para Principiantes</h4>
-                    <p class="widget-curso__label">Precio: 
-                        <span class="widget-curso__info">Gratis</span>
-                    </p>
-                    <p class="widget-curso__label">Cupo: 
-                        <span class="widget-curso__info">20</span>
-                    </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
-                </li>
-            </ul>
-        </aside>
     </div>
 
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-                </a>
+    <div class="header__texto">
+        <h2 class="no-margin">¡Bienvenidos a nuestro gran día!</h2>
+        <h2 class="no-margin">Esperamos que os guste lo que hemos preparado para compartir con vosotros</h2>
 
-                <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
+    </div>
+</header>
+
+<div class="contenedor contenido-principal">
+    <main>
+        <h2>Agenda</h2>
+
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/path-4342242_1920.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/path-4342242_1920.jpg">
+                </picture>
             </div>
+
+            <div class="entrada__contenido">
+                <h4 class="no-margin">La ceremonia</h4>
+                <p>Tendrá lugar el día 2 de julio a las 12:00 en la ermita de San Juan de Gaztelugatxe (Vizcaya)</p>
+
+            </div>
+        </article>
+
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/table-5356682_1920.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/table-5356682_1920.jpg">
+                </picture>
+            </div>
+
+            <div class="entrada__contenido">
+                <h4 class="no-margin">El banquete</h4>
+                <p>A las 14:30 nos esperan en el fantástico restaurante Akelarre, con su chef Pedro Subijana a la
+                    cabeza.</p>
+            </div>
+        </article>
+
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/disco-ball-3426765_1920.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/disco-ball-3426765_1920.jpg">
+                </picture>
+            </div>
+
+            <div class="entrada__contenido">
+                <h4 class="no-margin">La noche es joven</h4>
+                <p>Para los más aventureros, tenemos preparada una sorpresa especial...
+                    Tendremos a nuestra disposción desde las 20:00 hasta la 01:00 la
+                    genial discoteca Bataplan</p>
+
+            </div>
+        </article>
+    </main>
+
+</div>
+
+<footer class="footer">
+    <div class="contenedor">
+        <div class="barra">
+            <<h1 class="logo logo__nombre no-margin centrar-texto">Nuestra<span class="logo__bold">Boda</span></h1>
         </div>
-    </footer>
-    
-    <script src="js/modernizr.js"></script>
+    </div>
+</footer>
+
+<script src="js/modernizr.js"></script>
 </body>
 </html>

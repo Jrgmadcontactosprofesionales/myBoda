@@ -1,9 +1,9 @@
-    $("document").ready(function() {
-        let href = $(this).attr("href");
-        if ($(href).match(/^.*nuevoAsistente$/)) {
-            $("title,h2").text("Añadir asistente");   
-        }
-        });
+//    $("document").ready(function() {
+//        let href = $(this).attr("href");
+//        if ($(href).match(/^.*nuevoAsistente$/)) {
+//            $("title,h2").text("Añadir asistente");
+//        }
+//        });
 
 /* document.window.addEventListener('ready',determineHref());
 

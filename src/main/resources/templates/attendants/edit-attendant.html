@@ -1,14 +1,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<div th:insert="fragments/head :: head"></div>
-		<title>Añadir asistente</title>
+		<title>Editar asistente</title>
 	</head>
 	<body class="body-extra-padding">
 	<div th:insert="fragments/header :: header"></div>
 		<div class="container">
-			<h2>Añade un asistente</h2>
+			<h2>Edita al asistente</h2>
 			<hr/>
-			<form th:action="@{/guardar-nuevo-asistente}" th:object="${attendant}" method="POST">
+			<form th:action="@{/guardar-cambios-asistente}" th:object="${attendant}" method="PUT">
 				<input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Nombre" />
 				<input type="text" th:field="*{surname}" class="form-control col-4 mb-4" placeholder="Apellidos" />
 				<input type="date" th:field="*{dob}" class="form-control col-4 mb-4" placeholder="Fecha de nacimiento" />
@@ -21,6 +21,7 @@
 				<input type="text" th:field="*{specialRequirement}" class="form-control col-4 mb-4" placeholder="Peticiones especiales"/>
 				<button type="submit" class="btn btn-primary col-2">Guardar</button>
 				<input type="hidden" th:field="*{id}" />
+				<input type="hidden" th:field="*{loggedUser}" />
 			</form>
 			<hr/>
 			<a th:href="@{/asistentes}">Volver a la lista</a>

@@ -1,18 +1,38 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <div th:insert="fragments/head :: head"></div>
     <!--		TODO: descargar al proyecto-->
     <!--		TODO: ¿crear un nav?-->
     <link href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css"
           rel="stylesheet"
           type="text/css"/>
-    <div th:insert="fragments/head :: head"></div>
+
+    <!--    Styles non linkable by thymeleaf-->
+    <link as="style" href="css/style.css" rel="preload">
+    <link href="css/style.css" rel="stylesheet">
     <title>Asistentes a la boda asociados contigo</title>
 </head>
-<body class="body-extra-padding">
+
+<body class="margin-top-to-nav-on-body">
+<!--<picture >
+    <source loading="lazy" srcset="../img/flower-4865379_1920.webp" type="image/webp">
+    <img alt="imagen blog" loading="lazy" src="../img/flower-4865379_1920.jpg">
+</picture>-->
+
+
+    <img class="bg-img" alt="list photo" loading="lazy" th:src="@{/img/flower-4865379_1920.jpg}"/>
+                                                     
+
+
+
+
+
 <div th:insert="fragments/header :: header"></div>
 <div class="container">
     <h2>Asistentes</h2>
+
+</div>
     <hr/>
     <a class="btn btn-primary" th:href="@{/nuevo-asistente}">Añadir asistente</a>
     <br/><br/>
@@ -40,6 +60,7 @@
             <td th:text="${attendant.specialRequirement}"/>
             <td th:text="${attendant.specialRequirementStatus}"/>
             <td>
+<!--                TODO: arreglar simetría de los botones-->
                 <a class="btn btn-info btn-sm " th:href="@{/editar-asistente(attendantId=${attendant.id})}">Actualizar</a>
                 <a class="btn btn-danger mt-1 btn-sm" th:href="@{/eliminar-asistente(attendantId=${attendant.id})}">Eliminar</a>
             </td>
