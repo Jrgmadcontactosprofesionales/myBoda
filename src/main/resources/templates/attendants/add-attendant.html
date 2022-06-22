@@ -1,49 +1,40 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<div th:insert="fragments/head :: head"></div>
-		<!--    Styles non linkable by thymeleaf-->
-		<link as="style" href="css/style.css" rel="preload">
-		<link href="css/style.css" rel="stylesheet">
-		<title>Añadir asistente</title>
-	</head>
-	<body class="margin-top-to-nav-on-body-plus background-template-img">
-	<div th:insert="fragments/header :: header"></div>
-	<div class="container">
-		<h2>Añade asistente</h2>
-		<hr/>
-	</div> <!--form-group form-inline ml-5 mr-5-->
-
-	<div class="row justify-content-center">
-		<div class="">
-			<form class="form-group form-inline " th:action="@{/guardar-nuevo-asistente}" th:object="${attendant}" method="POST">
-				<input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Nombre" />
-				<input type="text" th:field="*{surname}" class="form-control col-4 mb-4" placeholder="Apellidos" />
-				<input type="date" th:field="*{dob}" class="form-control col-4 mb-4" placeholder="Fecha de nacimiento" />
-				<input type="text" th:field="*{ph}" class="form-control col-4 mb-4" placeholder="Teléfono" />
-				<select class="input-group form-control col-4 mb-4" name="attendingStatus">
-					<option value="" disabled selected hidden>Asistencia</option>
-					<option th:each="attendingStatusOpt : ${T(com.jorgealvarez.myboda.model.Status).values()}"
-							th:value="${attendingStatusOpt}" th:text="${attendingStatusOpt.displayValue}"></option>
-				</select>
-				<input type="text" th:field="*{specialRequirement}" class="form-control col-4 mb-4" placeholder="Peticiones especiales"/>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 bg-light text-right">
-								<button type="submit" class="btn btn-primary mb-4 ">Guardar</button>
-						</div>
-					</div>
-				</div>
-
-
-				<input type="hidden" th:field="*{id}" />
-			</form>
-
-		</div>
-	</div>
-
-
-		</div>
-<!--		TODO: intentar hacer que se haga dinámico title y h2. Si no, eliminar el scrip-->
-		<script src="js/javascript.js"/></script>
-	</body>
+<head>
+    <div th:insert="fragments/head :: head"></div>
+    <!--    Styles non linkable by thymeleaf-->
+    <link as="style" href="css/style.css" rel="preload">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Añadir invitado</title>
+</head>
+<body class="margin-top-to-nav-on-body-plus background-template-img">
+<div th:insert="fragments/header :: header"></div>
+<div class="container">
+    <h2>Añade invitado</h2>
+    <hr/>
+    <div class="row justify-content-center">
+        <form class="form-group form-inline " method="POST" th:action="@{/guardar-nuevo-invitado}"
+              th:object="${attendant}">
+            <input class="form-control col-4 mb-4" placeholder="Nombre" th:field="*{name}" type="text"/>
+            <input class="form-control col-4 mb-4" placeholder="Apellidos" th:field="*{surname}" type="text"/>
+            <input class="form-control col-4 mb-4" placeholder="Fecha de nacimiento" th:field="*{dob}" type="date"/>
+            <input class="form-control col-4 mb-4" placeholder="Teléfono" th:field="*{ph}" type="text"/>
+            <select class="input-group form-control col-4 mb-4" name="attendingStatus">
+                <option disabled hidden selected value="">Asistencia</option>
+                <option th:each="attendingStatusOpt : ${T(com.jorgealvarez.myboda.model.Status).values()}"
+                        th:text="${attendingStatusOpt.displayValue}" th:value="${attendingStatusOpt}"></option>
+            </select>
+            <input class="form-control col-4 mb-4" placeholder="Peticiones especiales" th:field="*{specialRequirement}"
+                   type="text"/>
+            <input th:field="*{id}" type="hidden"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 bg-light text-right">
+                        <button class="btn btn-primary mb-4 " type="submit">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
 </html>

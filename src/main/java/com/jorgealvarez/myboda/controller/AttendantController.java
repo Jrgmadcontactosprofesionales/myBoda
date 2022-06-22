@@ -16,7 +16,7 @@ public class AttendantController {
     @Autowired
     private AttendantRepository attendantRepository;
 
-    @GetMapping({"/asistentes"})
+    @GetMapping({"/invitados"})
     public ModelAndView getAttendants() {
         ModelAndView modelAndView = new ModelAndView("/attendants/list-attendants");
         String loggedUser = getLoggedUserService();
@@ -28,7 +28,7 @@ public class AttendantController {
         return modelAndView;
     }
 
-    @GetMapping("/nuevo-asistente")
+    @GetMapping("/nuevo-invitado")
     public ModelAndView addAttendant() {
         ModelAndView modelAndView = new ModelAndView("/attendants/add-attendant");
         Attendant attendant = new Attendant();
@@ -36,14 +36,14 @@ public class AttendantController {
         return modelAndView;
     }
 
-    @PostMapping("/guardar-nuevo-asistente")
+    @PostMapping("/guardar-nuevo-invitado")
     public String saveNewAttendant(@ModelAttribute Attendant attendant) {
         attendant.setLoggedUser(getLoggedUserService());
         attendantRepository.save(attendant);
-        return "redirect:/asistentes";
+        return "redirect:/invitados";
     }
 
-    @GetMapping("/editar-asistente")
+    @GetMapping("/editar-invitado")
     public ModelAndView editAttendant(@RequestParam int attendantId) {
         ModelAndView modelAndView = new ModelAndView("/attendants/edit-attendant");
         Attendant attendant = attendantRepository.findById(attendantId).get();
@@ -52,7 +52,7 @@ public class AttendantController {
     }
 
     //TODO JORGE PEDRO: no funciona el método post y no se puede editar
-    @PutMapping("/guardar-cambios-asistente")
+    @PutMapping("/guardar-cambios-invitado")
     public String saveEditedAttendant(@RequestBody Attendant attendant) {
         Attendant attendantTemp = attendantRepository.findById(attendant.getId()).get();
         attendantTemp.setName(attendant.getName());
@@ -63,11 +63,11 @@ public class AttendantController {
         attendantTemp.setSpecialRequirement(attendant.getSpecialRequirement());
         attendantTemp.setSpecialRequirementStatus(attendant.getSpecialRequirementStatus());
         attendantRepository.save(attendantTemp);
-        return "redirect:/asistentes";
+        return "redirect:/invitados";
     }
 
 
-//    @PutMapping("/guardar-cambios-asistente/{attendantId}")
+//    @PutMapping("/guardar-cambios-invitado/{attendantId}")
 //    public String saveEditedAttendant(@PathVariable("attendantId") int attendantId,
 //                                      @RequestBody Attendant attendant) {
 //        Attendant attendantTemp = attendantRepository.findById(attendantId).get();
@@ -83,7 +83,7 @@ public class AttendantController {
 //    }
 
 
-//    @PutMapping("/guardar-cambios-asistente")
+//    @PutMapping("/guardar-cambios-invitado")
 //    public String saveEditedAttendant(@RequestBody Attendant attendant) {
 //        Attendant attendantTemp = attendantRepository.findById(attendant.getId()).get();
 //        attendantTemp.setName(attendant.getName());
@@ -97,7 +97,7 @@ public class AttendantController {
 //        return "redirect:/asistentes";
 //    }
 
-//    @PutMapping("/guardar-cambios-asistente/{attendantId}")
+//    @PutMapping("/guardar-cambios-invitado/{attendantId}")
 //    public String saveEditedAttendant(@PathVariable(value = "attendantId") int attendantId, @Valid @RequestBody Attendant attendantNewDetails) throws ResourceNotFoundException {
 //        Attendant attendant = attendantRepository.findById(attendantId)
 //                .orElseThrow(() -> new ResourceNotFoundException("No se ha encontrado ningún asistente con este id :: " + attendantId));
@@ -112,16 +112,16 @@ public class AttendantController {
 //        return "redirect:/asistentes";
 //    }
 
-//    @GetMapping("/guardar-cambios-asistente/{attendantId}")
+//    @GetMapping("/guardar-cambios-invitado/{attendantId}")
 //    public String saveEditedAttendant(@RequestParam int attendantId, @RequestBody Attendant attendantNewDetails) {
 //        attendantRepository.save(attendantRepository.findById(attendantNewDetails.getId()).get());
 //        return "redirect:/asistentes";
 //    }
 
 
-    @GetMapping("/eliminar-asistente")
+    @GetMapping("/eliminar-invitado")
     public String deleteAttendant(@RequestParam int attendantId) {
         attendantRepository.deleteById(attendantId);
-        return "redirect:/asistentes";
+        return "redirect:/invitados";
     }
 }
