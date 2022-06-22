@@ -10,17 +10,25 @@
     --negro: #000000;
 }
 
-body {
-background-color:yellow;
+ .table {
+    background-image: url(../img/flower-4865379_1920.webp);
+    background-image: url(../img/flower-4865379_1920.png);
 }
 
-/*table {
+/*body {
+background-color:yellow;    
+}*/
+
+
+/* table {
     background-size: 3096px auto;
     background-repeat: no-repeat;
-    background-image: url("img/attendants.png");*/
-}
+    background-image: url("img/flower-4865379_1920.png");
+ */
+
+
 .margin-top-to-nav-on-body{
-    padding-top:50px !important;
+    padding-top:70px !important;
 }
 
 html {
