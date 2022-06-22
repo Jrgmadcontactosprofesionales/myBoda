@@ -15,12 +15,7 @@
     <title>Asistentes a la boda asociados contigo</title>
 </head>
 
-<body class="margin-top-to-nav-on-body table ">
-
-<picture>
-    <source loading="lazy" srcset="img/attendants.webp" type="image/webp">
-    <img alt="imagen blog" loading="lazy" src="img/attendants.png">
-</picture>
+<body class="margin-top-to-nav-on-body background-template-img ">
 
 <div th:insert="fragments/header :: header"></div>
 <div class="container">
@@ -30,7 +25,7 @@
     <hr/>
     <a class="btn btn-primary" th:href="@{/nuevo-asistente}">Añadir asistente</a>
     <br/><br/>
-    <table class="table table-bordered table-striped table" id="attendantTable">
+    <table class="table-bordered table-striped " id="attendantTable">
         <thead>
         <tr>
             <th>Nombre</th>
