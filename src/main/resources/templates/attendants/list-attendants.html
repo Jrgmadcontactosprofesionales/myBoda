@@ -23,8 +23,9 @@
 
 </div>
     <hr/>
-    <a class="btn btn-primary" th:href="@{/nuevo-asistente}">Añadir asistente</a>
-    <br/><br/>
+<div class="row justify-content-center">
+    <div class="col-auto">
+        <a class="btn btn-primary mb-4" th:href="@{/nuevo-asistente}">Añadir asistente</a>
     <table class="table-bordered table-striped " id="attendantTable">
         <thead>
         <tr>
@@ -56,6 +57,8 @@
         </tr>
         </tbody>
     </table>
+</div>
+</div>
 </div>
 
 <script src="js/jquery.js"></script>

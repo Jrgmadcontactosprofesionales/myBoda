@@ -10,12 +10,20 @@
     --negro: #000000;
 }
 
+
+
+
+
  .background-template-img {
-    /* background-image: url(../img/flower-4865379_1920.webp)  ; */
+     background-image: url(../img/flower-4865379_1920.webp)  ;
     background-image: url(../img/flower-4865379_1920.png) ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.div-table {
+margin:0 0 0 0 ;
 }
 
 .margin-top-to-nav-on-body{
@@ -131,21 +139,28 @@ img {
 }
 
 @media (min-width: 768px) {
-    .contenido-principal {
+    .contenido-principal-col1 {
         display: grid;
-        grid-template-columns:  1fr;
+        grid-template-columns:  1fr 1fr;
         column-gap: 4rem;
     }
 }
 
 .entrada {
     border-bottom: 1px solid var(--gris);
+    border-top: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
 .entrada:last-of-type {
     border: none;
     margin-bottom: 0;
 }
+
+.entrada:first-of-type {
+    border-top: none;
+
+}
+
 .boton {
     display: block;
     font-family: var(--fontHeading);
@@ -205,6 +220,13 @@ img {
     margin-top: 4rem;
 }
 
+@media (min-width: 768px) {
+    .contenido-principal-col1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
 
 /*TODO cambiar cursos a regalos con cuidado*/
 /** Cursos **/
@@ -212,13 +234,7 @@ img {
     padding: 3rem 0;
     border-bottom: 1px solid var(--gris);
 }
-@media (min-width: 768px) {
-    .curso {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 2rem;
-    }
-}
+
 .curso:last-of-type {
    border: none;
 }
