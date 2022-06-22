@@ -7,36 +7,33 @@
     <link href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css"
           rel="stylesheet"
           type="text/css"/>
-
     <!--    Styles non linkable by thymeleaf-->
     <link as="style" href="css/style.css" rel="preload">
     <link href="css/style.css" rel="stylesheet">
-
     <title>Asistentes a la boda asociados contigo</title>
 </head>
 
-<body class="margin-top-to-nav-on-body background-template-img ">
-
+<body class="margin-top-to-nav-on-body-plus background-template-img ">
 <div th:insert="fragments/header :: header"></div>
 <div class="container">
     <h2>Asistentes</h2>
-
-</div>
     <hr/>
+</div>
+
 <div class="row justify-content-center">
     <div class="col-auto">
         <a class="btn btn-primary mb-4" th:href="@{/nuevo-asistente}">Añadir asistente</a>
-    <table class="table-bordered table-striped " id="attendantTable">
+    <table class="table-bordered table-striped table-responsive" id="attendantTable">
         <thead>
         <tr>
             <th>Nombre</th>
             <th>Apellidos</th>
-            <th>Fecha de nacimiento</th>
+            <th>Fecha de nac.</th>
             <th>Teléfono</th>
-            <th>¿Asistencia?</th>
-            <th>Peticiones especiales</th>
-            <th>Confirmación de peticiones especiales</th>
-            <th>Actions</th>
+            <th>Asistencia</th>
+            <th>Pet. especiales</th>
+            <th>Conf. de pet. especiales</th>
+            <th>Acciones</th>
         </tr>
         </thead>
         <tbody>
@@ -50,9 +47,8 @@
             <td th:text="${attendant.specialRequirement}"/>
             <td th:text="${attendant.specialRequirementStatus}"/>
             <td>
-<!--                TODO: arreglar simetría de los botones-->
                 <a class="btn btn-info btn-sm " th:href="@{/editar-asistente(attendantId=${attendant.id})}">Actualizar</a>
-                <a class="btn btn-danger mt-1 btn-sm" th:href="@{/eliminar-asistente(attendantId=${attendant.id})}">Eliminar</a>
+                <a class="btn btn-danger btn-sm" th:href="@{/eliminar-asistente(attendantId=${attendant.id})}">Eliminar</a>
             </td>
         </tr>
         </tbody>
