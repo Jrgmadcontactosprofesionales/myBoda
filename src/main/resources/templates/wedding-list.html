@@ -1,112 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogDeCafé</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <div th:insert="fragments/head :: head"></div>
+    <title>Lista de bodas</title>
+    <!--    Styles non linkable by thymeleaf-->
+    <link as="style" href="css/style.css" rel="preload">
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="margin-top-to-nav-on-body weddinglist">
+<div th:insert="fragments/header :: header"></div>
+<header class="header" id="weddinglist-header">
 
-    <header class="header">
-
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-                </a>
-
-                <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
-            </div>
+    <div class="contenedor">
+        <div class="barra">
+            <h1 class="logo logo__nombre no-margin centrar-texto">Lista de<span
+                    class="logo__bold">Boda</span></h1>
         </div>
+    </div>
 
-        <div class="header__texto">
-            <h2 class="no-margin">Blog de café con consejos y cursos</h2>
-            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
-        </div>
-    </header>
+    <div class="header__texto">
+        <h2 class="no-margin">¡Muchas gracias a todos por vuestra generosidad!</h2>
+        <h2 class="no-margin">Ya sabeís que no tenéis ningún compromiso y que el detalle es vuestra presencia.</h2>
 
-    <main class="contenedor">
-        <h3 class="centrar-texto">Nuestros Próximos Cursos y Talleres</h3>
+    </div>
+</header>
 
-        <div class="curso">
-            <div class="curso__imagen">
-                <img src="img/curso1.jpg" alt="Imagen del curso">
+<div class="contenedor contenido-principal">
+    <main>
+        <h2>Agenda</h2>
+
+        <article class="entrada contenido-principal-col1">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/thanks.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/thanks.jpg">
+                </picture>
             </div>
-            <div class="curso__informacion">
-                <h4 class="no-margin">Técnicas de extracción de café</h4>
-                <p class="curso__label">Precio: 
-                    <span class="curso__info">Gratis</span>
-                </p>
-                <p class="curso__label">Cupo: 
-                    <span class="curso__info">20</span>
-                </p>
-                <p class="curso__descripcion">
-                    Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
-                </p>
-            </div> <!--.curso-informacion-->
-        </div> <!--.curso -->
 
-        <div class="curso">
-            <div class="curso__imagen">
-                <img src="img/curso2.jpg" alt="Imagen del curso">
+            <div class="entrada__contenido">
+                <h4 class="no-margin">La ceremonia</h4>
+                <p>Tendrá lugar el día 2 de julio a las 12:00 en la ermita de San Juan de Gaztelugatxe (Vizcaya)</p>
+
             </div>
-            <div class="curso__informacion">
-                <h4 class="no-margin">Taller para Tostar y Moler Granos</h4>
-                <p class="curso__label">Precio: 
-                    <span class="curso__info">Gratis</span>
-                </p>
-                <p class="curso__label">Cupo: 
-                    <span class="curso__info">20</span>
-                </p>
-                <p class="curso__descripcion">
-                    Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
-                </p>
-            </div> <!--.curso-informacion-->
-        </div> <!--.curso -->
+        </article>
 
-        <div class="curso">
-            <div class="curso__imagen">
-                <img src="img/curso3.jpg" alt="Imagen del curso">
+        <article class="entrada contenido-principal-col1">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/table-5356682_1920.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/table-5356682_1920.jpg">
+                </picture>
             </div>
-            <div class="curso__informacion">
-                <h4 class="no-margin">4 Recetas de Café para Principiantes</h4>
-                <p class="curso__label">Precio: 
-                    <span class="curso__info">Gratis</span>
-                </p>
-                <p class="curso__label">Cupo: 
-                    <span class="curso__info">20</span>
-                </p>
-                <p class="curso__descripcion">
-                    Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
-                </p>
-            </div> <!--.curso-informacion-->
-        </div> <!--.curso -->
 
-        
+            <div class="entrada__contenido">
+                <h4 class="no-margin">El banquete</h4>
+                <p>A las 14:30 nos esperan en el fantástico restaurante Akelarre, con su chef Pedro Subijana a la
+                    cabeza.</p>
+            </div>
+        </article>
+
+        <article class="entrada contenido-principal-col1">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/disco-ball-3426765_1920.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/disco-ball-3426765_1920.jpg">
+                </picture>
+            </div>
+
+            <div class="entrada__contenido">
+                <h4 class="no-margin">La noche es joven</h4>
+                <p>Para los más aventureros, tenemos preparada una sorpresa especial...
+                    Tendremos a nuestra disposción desde las 20:00 hasta la 01:00 la
+                    genial discoteca Bataplan</p>
+
+            </div>
+        </article>
     </main>
 
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-                </a>
+</div>
 
-                <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
-            </div>
+<footer class="footer">
+    <div class="contenedor">
+        <div class="barra">
+            <<h1 class="logo logo__nombre no-margin centrar-texto">Nuestra<span
+                class="logo__bold">Boda</span></h1>
         </div>
-    </footer>
-    <script src="js/modernizr.js"></script>
+    </div>
+</footer>
+
+<script src="js/modernizr.js"></script>
 </body>
 </html>

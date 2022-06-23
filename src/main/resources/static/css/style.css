@@ -85,7 +85,7 @@ img {
 }
 
 /** Header **/
-.webp .header {
+ .webp .header {
     background-image: url(../img/couple-1850073_1920.webp);
     background-position: center
     background-size: cover;
@@ -95,6 +95,21 @@ img {
     background-position: center
     background-size: cover;
 }
+
+#weddinglist-header {
+    background-image: url(../img/thanks.webp);
+    background-position: center
+    background-size: cover;
+}
+.weddinglist-header {
+    background-image: url(../img/thanks.jpg);
+    background-position: center
+    background-size: cover;
+}
+
+
+
+
 .header {
     height: 60rem;
     background-size: cover;
@@ -124,7 +139,7 @@ img {
 }
 .logo {
     color: var(--blanco);
-    
+
 }
 .logo__nombre {
     font-weight: 400;
