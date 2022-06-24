@@ -11,7 +11,6 @@
 <body class="margin-top-to-nav-on-body weddinglist">
 <div th:insert="fragments/header :: header"></div>
 <header class="header" id="weddinglist-header">
-
     <div class="contenedor">
         <div class="barra">
             <h1 class="logo logo__nombre no-margin centrar-texto">Lista de <span
@@ -29,18 +28,19 @@
     <h2>Propuestas</h2>
     <br>
     <div class="contenedor "></div>
-    <article class="entrada weddinglist-entrada">
+    <article hidden class="entrada weddinglist-entrada">
         <div class=" weddinglist-entrada__imagen__fila__1 ">
             <picture>
                 <source loading="lazy" srcset="img/banco.webp" type="image/webp">
-                <img alt="imagen blog" loading="lazy" src="img/banco.jpg">
+                <img alt="imagen banco" loading="lazy" src="img/banco.jpg">
             </picture>
         </div>
         <div class="weddinglist-entrada__contenido__fila__1 {">
             <h4 class="no-margin">Banco de jardín</h4>
             <p>Nos encanta este banco de jardín porque nos recuerda al que nos sentamos el día
                 que nos conocimos. Maecenas lacinia vestibulum tristique. Morbi mollis sapien ac volutpat placerat. In
-                sed pretium lacus. Morbi iaculis, orci eu porttitor pharetra, justo lacus sollicitudin felis, et
+                sed pretium lacus.
+                Morbi iaculis, orci eu porttitor pharetra, justo lacus sollicitudin felis, et
                 vestibulum odio nunc a augue. Ut id enim urna. In id sapien mi. Integer volutpat, ipsum vitae tincidunt
                 interdum, est lectus condimentum nulla, in tincidunt velit quam a ante. Duis pellentesque justo erat, ac
                 sagittis nunc ultricies vel. Mauris a sodales velit, nec venenatis purus. Curabitur fringilla libero
@@ -60,13 +60,18 @@
         <div class="entrada__imagen weddinglist-entrada__imagen__fila__2 ">
             <picture>
                 <source loading="lazy" srcset="img/tv.webp" type="image/webp">
-                <img alt="imagen blog" loading="lazy" src="img/tv.jpg">
+                <img alt="imagen tv" loading="lazy" src="img/tv.jpg">
             </picture>
         </div>
         <div class="weddinglist-entrada__contenido__fila__2">
             <h4 class="no-margin">Televisor</h4>
             <p>Ayúdanos a acurrucarnos para ver nuestra serie favorita. Prometemos pensar en ti durante la introducción
-                de cada episodio...</p>
+                de cada episodio...
+                In interdum, elit eget egestas pretium, nunc ex viverra erat, et auctor elit sem ut massa. Integer
+                turpis felis, pharetra faucibus odio in, ultricies maximus dui. Ut sollicitudin urna libero, sed
+                efficitur neque semper non. Ut ac dictum mauris, at congue ante. Sed non nibh vel neque vestibulum
+                luctus a in dui. Etiam dapibus ligula nibh, quis vehicula ipsum interdum ac. Interdum et malesuada fames
+                ac ante ipsum primis in faucibus. Nullam at justo enim.</p>
         </div>
         <div class="form-check form-check-block mt-3 weddinglist-entrada__check__fila__2">
             <input class="form-check-input mt-3 " type="checkbox" value="" id="gift2">
@@ -79,14 +84,22 @@
     <article class="entrada weddinglist-entrada">
         <div class="weddinglist-entrada__imagen__fila__3 ">
             <picture>
-                <source loading="lazy" srcset="img/banco.webp" type="image/webp">
-                <img alt="imagen blog" loading="lazy" src="img/banco.jpg">
+                <source loading="lazy" srcset="img/kitchen.webp" type="image/webp">
+                <img alt="imagen cocina" loading="lazy" src="img/kitchen.jpg">
             </picture>
         </div>
         <div class="weddinglist-entrada__contenido__fila__3 {">
-            <h4 class="no-margin">Banco de jardín</h4>
-            <p>Nos encanta este banco de jardín porque nos recuerda al que nos sentamos el día
-                que nos conocimos. </p>
+            <h4 class="no-margin">Cocina Isla</h4>
+            <p>Una de las mayores ilusiones que siempre hemos tenido para cuando acabemos nuestra nueva casa es tener
+                una cocina isla.
+                Curabitur diam purus, vulputate vitae elit ut, sagittis molestie orci. Interdum et malesuada fames ac
+                ante ipsum primis in faucibus. Nam euismod bibendum placerat. Vivamus convallis metus mattis, cursus
+                justo quis, laoreet purus. Nam eget semper diam, in mollis sapien. Sed quam erat, mollis vel ligula sit
+                amet, finibus sodales mauris. Ut egestas sit amet orci at tristique. Suspendisse ac tempor lorem, et
+                tempor est. Curabitur consequat massa id porttitor semper. Donec ornare, dui sed congue mollis, massa
+                orci euismod lectus, id tempus odio mauris quis metus. Aliquam feugiat tortor velit, ut suscipit libero
+                molestie id. Nullam leo ipsum, varius eget neque non, congue vehicula ex. Morbi ac scelerisque
+                neque. </p>
         </div>
         <div class="form-check form-check-block mt-3 weddinglist-entrada__check__fila__3">
             <input class="form-check-input mt-3 " type="checkbox" value="" id="gift3">

@@ -2,9 +2,13 @@
 <html>
 <head>
     <div th:insert="fragments/head :: head"></div>
+    <div th:insert="fragments/head :: head"></div>
+    <!--    Styles non linkable by thymeleaf-->
+    <link as="style" href="css/style.css" rel="preload">
+    <link href="css/style.css" rel="stylesheet">
     <title>Regístrate</title>
 </head>
-<body class="body-extra-padding">
+<body class="margin-top-to-nav-on-body-plus">
 <div th:insert="fragments/header :: header"></div>
 <div class="container ">
     <div class="row">

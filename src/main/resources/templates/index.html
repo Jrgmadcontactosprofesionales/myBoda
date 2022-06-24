@@ -2,78 +2,101 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <div th:insert="fragments/head :: head"></div>
-    <title>La boda</title>
     <!--    Styles non linkable by thymeleaf-->
     <link as="style" href="css/style.css" rel="preload">
     <link href="css/style.css" rel="stylesheet">
-
+    <title>La boda</title>
 </head>
 <body class="margin-top-to-nav-on-body">
 <div th:insert="fragments/header :: header"></div>
-<header class="header">
-
+<header class="header" id="wedding-header">
     <div class="contenedor">
         <div class="barra">
-            <h1 class="logo logo__nombre no-margin centrar-texto">Nuestra <span class="logo__bold">Boda</span></h1>
+            <h1 class="logo logo__nombre no-margin centrar-texto">Nuestra <span
+                    class="logo__bold">Boda</span></h1>
         </div>
     </div>
 
     <div class="header__texto">
         <h2 class="no-margin">¡Bienvenidos a nuestro gran día!</h2>
         <h2 class="no-margin">Esperamos que os guste lo que hemos preparado para compartir con vosotros...</h2>
-
     </div>
 </header>
 <main>
     <br>
     <h2>Agenda</h2>
     <br>
-    <div class="contenedor ">
-        <article class="entrada index-entrada">
-            <div class="index-entrada__imagen__fila_1">
-                <picture>
-                    <source loading="lazy" srcset="img/path-4342242_1920.webp" type="image/webp">
-                    <img alt="imagen blog" loading="lazy" src="img/path-4342242_1920.jpg">
-                </picture>
-            </div>
-            <div class="index-entrada__contenido__fila_1">
-                <h4 class="no-margin">La ceremonia</h4>
-                <p>Tendrá lugar el día 2 de julio a las 12:00 en la ermita de San Juan de Gaztelugatxe (Vizcaya)</p>
-            </div>
-        </article>
-        <article class="entrada index-entrada">
-            <div class="index-entrada__imagen__fila_2">
-                <picture>
-                    <source loading="lazy" srcset="img/table-5356682_1920.webp" type="image/webp">
-                    <img alt="imagen blog" loading="lazy" src="img/table-5356682_1920.jpg">
-                </picture>
-            </div>
-            <div class="index-entrada__contenido__fila_2">
-                <h4 class="no-margin">El banquete</h4>
-                <p>A las 14:30 nos esperan en el fantástico restaurante Akelarre, con su chef Pedro Subijana a la
-                    cabeza.</p>
-            </div>
-        </article>
-        <article class="entrada index-entrada">
-            <div class="index-entrada__imagen__fila_3">
-                <picture>
-                    <source loading="lazy" srcset="img/disco-ball-3426765_1920.webp" type="image/webp">
-                    <img alt="imagen blog" loading="lazy" src="img/disco-ball-3426765_1920.jpg">
-                </picture>
-            </div>
-            <div class="index-entrada__contenido__fila_3">
-                <h4 class="no-margin">La noche es joven</h4>
-                <p>Para los más aventureros, tenemos preparada una sorpresa especial...
-                    Tendremos a nuestra disposción desde las 20:00 hasta la 01:00 la
-                    genial discoteca Bataplan</p>
-            </div>
-        </article>
-    </div>
+    <div class="contenedor "></div>
+    <article class="entrada index-entrada">
+        <div class=" index-entrada__imagen__fila__1 ">
+            <picture>
+                <source loading="lazy" srcset="img/path-4342242_1920.webp" type="image/webp">
+                <img alt="imagen iglesia" loading="lazy" src="img/path-4342242_1920.jpg">
+            </picture>
+        </div>
+        <div class="index-entrada__contenido__fila__1 {">
+            <h4 class="no-margin">La ceremonia</h4>
+            <p>Tendrá lugar el día 2 de julio a las 12:00 en la ermita de San Juan de Gaztelugatxe (Vizcaya).
+                Morbi mollis sapien ac volutpat placerat. In
+                sed pretium lacus.
+                Morbi iaculis, orci eu porttitor pharetra, justo lacus sollicitudin felis, et
+                vestibulum odio nunc a augue. Ut id enim urna. In id sapien mi. Integer volutpat, ipsum vitae tincidunt
+                interdum, est lectus condimentum nulla, in tincidunt velit quam a ante. Duis pellentesque justo erat, ac
+                sagittis nunc ultricies vel. Mauris a sodales velit, nec venenatis purus. Curabitur fringilla libero
+                lacinia, volutpat libero ac, elementum magna. Etiam ut orci nec quam tincidunt lacinia vitae vitae
+                felis. Vivamus faucibus felis urna, ornare pellentesque turpis bibendum eget. Sed luctus neque sed
+                facilisis ullamcorper. Aliquam iaculis odio id nisi semper, ac mollis turpis tincidunt.
+        </div>
+    </article>
+    <article class="entrada index-entrada">
+        <div class="index-entrada__imagen__fila__2 ">
+            <picture>
+                <source loading="lazy" srcset="img/table-5356682_1920.webp" type="image/webp">
+                <img alt="imagen mesa" loading="lazy" src="img/table-5356682_1920.jpg">
+            </picture>
+        </div>
+        <div class="index-entrada__contenido__fila__2">
+            <h4 class="no-margin">El banquete</h4>
+            <p>A las 14:30 nos esperan en el fantástico restaurante Akelarre, con su chef Pedro Subijana a la
+                cabeza.
+                In interdum, elit eget egestas pretium, nunc ex viverra erat, et auctor elit sem ut massa. Integer
+                turpis felis, pharetra faucibus odio in, ultricies maximus dui. Ut sollicitudin urna libero, sed
+                efficitur neque semper non. Ut ac dictum mauris, at congue ante. Sed non nibh vel neque vestibulum
+                luctus a in dui. Etiam dapibus ligula nibh, quis vehicula ipsum interdum ac. Interdum et malesuada fames
+                ac ante ipsum primis in faucibus. Nullam at justo enim.</p>
+        </div>
+    </article>
+    <article class="entrada index-entrada">
+        <div class="index-entrada__imagen__fila__3 ">
+            <picture>
+                <source loading="lazy" srcset="img/disco-ball-3426765_1920.webp" type="image/webp">
+                <img alt="imagen disco" loading="lazy" src="img/disco-ball-3426765_1920.jpg">
+            </picture>
+        </div>
+        <div class="index-entrada__contenido__fila__3 {">
+            <h4 class="no-margin">La noche es joven</h4>
+            <p>Para los más aventureros, tenemos preparada una sorpresa especial...
+                Tendremos a nuestra disposción desde las 20:00 hasta la 01:00 la
+                genial discoteca Bataplan. Curabitur diam purus, vulputate vitae elit ut, sagittis molestie orci.
+                Interdum et malesuada fames ac
+                ante ipsum primis in faucibus. Nam euismod bibendum placerat. Vivamus convallis metus mattis, cursus
+                justo quis, laoreet purus. Nam eget semper diam, in mollis sapien. Sed quam erat, mollis vel ligula sit
+                amet, finibus sodales mauris. Ut egestas sit amet orci at tristique. Suspendisse ac tempor lorem, et
+                tempor est. Curabitur consequat massa id porttitor semper. Donec ornare, dui sed congue mollis, massa
+                orci euismod lectus, id tempus odio mauris quis metus. Aliquam feugiat tortor velit, ut suscipit libero
+                molestie id. Nullam leo ipsum.
+                neque. </p>
+        </div>
+    </article>
 </main>
+
+</div>
+
 <footer class="footer">
     <div class="contenedor">
         <div class="barra">
-            <<h1 class="logo logo__nombre no-margin centrar-texto">Nuestra<span class="logo__bold">Boda</span></h1>
+            <<h1 class="logo logo__nombre no-margin centrar-texto">Nuestra <span
+                class="logo__bold">Boda</span></h1>
         </div>
     </div>
 </footer>

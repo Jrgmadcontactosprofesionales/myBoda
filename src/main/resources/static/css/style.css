@@ -44,7 +44,7 @@ body {
 }
 
 /** Globales **/
-.contenedor {
+.contenedor {/**/
     width: min(90%, 120rem);
     margin: 0 auto;
 }
@@ -84,12 +84,12 @@ img {
 }
 
 /** Header **/
- .webp .header {
+ #wedding-header {
     background-image: url(../img/couple-1850073_1920.webp);
     background-position: top;
     background-size: cover;
 }
-.no-webp .header {
+#wedding-header {
     background-image: url(../img/couple-1850073_1920.jpg);
     background-position: top;
     background-size: cover;
@@ -105,8 +105,6 @@ img {
     background-position: top;
     background-size: cover;
 }
-
-
 
 
 .header {
@@ -291,55 +289,10 @@ grid-column: 2 / 3;
     background-color: var(--primario);
 }
 
-.cursos {
-    list-style: none;
-}
-
-.widget-curso {
-    /*border-bottom: 1px solid var(--gris);*/
-    margin-bottom: 2rem;
-}
-.widget-curso:last-of-type {
-    border: none;
-    margin-bottom: 0;
-}
-.widget-curso__label {
-    font-family: var(--fontHeading);
-    font-weight: bold;
-}
-.widget-curso__info {
-    font-weight: normal;
-}
-.widget-curso__label,
-.widget-curso__info {
-    font-size: 2rem;
-}
 
 .footer {
     background-color: var(--negro);
     padding-bottom: 3rem;
     margin-top: 4rem;
 }
-
-
-/*TODO cambiar cursos a regalos con cuidado*/
-/** Cursos **/
-.curso {
-    padding: 3rem 0;
-    border-bottom: 1px solid var(--gris);
-}
-
-.curso:last-of-type {
-   border-bottom: none;
-}
-.curso__label {
-    font-family: var(--fontHeading);
-    font-weight: bold;
-}
-.curso__info {
-    font-weight: normal;
-}
-.curso__label,
-.curso__info {
-    font-size: 2rem;
 }
