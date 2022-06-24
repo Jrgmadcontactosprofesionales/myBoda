@@ -155,10 +155,56 @@ img {
 }
 
 @media (min-width: 768px) {
-    .contenido-principal-col1 {
+    .contenido-principal-lista {
         display: grid;
-        grid-template-columns:  1fr 1fr;
-        column-gap: 4rem;
+        grid-template-columns:  4fr 4fr 2fr;
+        column-gap: 5rem;
+    }
+
+@media (min-width: 768px) {  
+.weddinglist-entrada__imagen__fila_1 {
+grid-row: 1 / 2;
+grid-column: 1 / 2;
+}
+
+.weddinglist-entrada__contenido__fila__1 {
+grid-row: 1 / 2;
+grid-column: 2 / 3;
+}
+
+.weddinglist-entrada__check__fila__1 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}    
+
+.weddinglist-entrada__imagen__fila__2 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    }
+    
+.weddinglist-entrada__contenido__fila__2 {
+grid-row: 2 / 3;
+grid-column: 2 / 3;
+}
+
+.weddinglist-entrada__check__fila__2 {
+    grid-row: 2 / 2;
+    grid-column: 3 / 4;
+    }
+
+.weddinglist-entrada__imagen__fila__3 {
+grid-row: 3 / 4;
+grid-column: 1 / 2;
+}
+        
+.weddinglist-entrada__contenido__fila__3 {
+grid-row: 3 / 4;
+grid-column: 2 / 3;
+}
+
+.weddinglist-entrada__check__fila__3 {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
     }
 }
 
@@ -239,8 +285,8 @@ img {
 @media (min-width: 768px) {
     .contenido-principal-col1 {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 2rem;
+        grid-template-columns: 1fr 1fr ;
+        column-gap: 5rem;
     }
 }
 

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <div th:insert="fragments/head :: head"></div>
-    <title>Lista de bodas</title>
+    <title>Lista de boda</title>
     <!--    Styles non linkable by thymeleaf-->
     <link as="style" href="css/style.css" rel="preload">
     <link href="css/style.css" rel="stylesheet">
@@ -14,7 +14,7 @@
 
     <div class="contenedor">
         <div class="barra">
-            <h1 class="logo logo__nombre no-margin centrar-texto">Lista de<span
+            <h1 class="logo logo__nombre no-margin centrar-texto">Lista de <span
                     class="logo__bold">Boda</span></h1>
         </div>
     </div>
@@ -26,54 +26,68 @@
     </div>
 </header>
 
-<div class="contenedor contenido-principal">
+
     <main>
-        <h2>Agenda</h2>
+        <h2>Propuestas</h2>
 
-        <article class="entrada contenido-principal-col1">
-            <div class="entrada__imagen">
+        <div class="contenedor "></div>
+
+        <article class="entrada entrada contenido-principal-lista">
+            <div class="entrada__imagen weddinglist-entrada__imagen__fila__1 ">
                 <picture>
-                    <source loading="lazy" srcset="img/thanks.webp" type="image/webp">
-                    <img alt="imagen blog" loading="lazy" src="img/thanks.jpg">
+                    <source loading="lazy" srcset="img/banco.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/banco.jpg">
                 </picture>
             </div>
-
-            <div class="entrada__contenido">
-                <h4 class="no-margin">La ceremonia</h4>
-                <p>Tendrá lugar el día 2 de julio a las 12:00 en la ermita de San Juan de Gaztelugatxe (Vizcaya)</p>
-
+            <div class="entrada__contenido weddinglist-entrada__contenido__fila__1 {">
+                <h4 class="no-margin">Banco de jardín</h4>
+                <p>Nos encanta este banco de jardín porque nos recuerda al que nos sentamos el día
+                que nos conocimos</p>
+            </div>
+            <div class="form-check form-check-block mt-3 weddinglist-entrada__check__fila__1">
+                <input class="form-check-input mt-3 " type="checkbox" value="" id="gift1" >
+                <label class="form-check-label" for="gift1">
+                    <p>&nbsp;Yo me encargo... &#128526;</p>
+                </label>
             </div>
         </article>
 
-        <article class="entrada contenido-principal-col1">
-            <div class="entrada__imagen">
+        <article class="entrada entrada contenido-principal-lista">
+            <div class="entrada__imagen weddinglist-entrada__imagen__fila__2 ">
                 <picture>
-                    <source loading="lazy" srcset="img/table-5356682_1920.webp" type="image/webp">
-                    <img alt="imagen blog" loading="lazy" src="img/table-5356682_1920.jpg">
+                    <source loading="lazy" srcset="img/tv.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/tv.jpg">
                 </picture>
             </div>
-
-            <div class="entrada__contenido">
-                <h4 class="no-margin">El banquete</h4>
-                <p>A las 14:30 nos esperan en el fantástico restaurante Akelarre, con su chef Pedro Subijana a la
-                    cabeza.</p>
+            <div class="entrada__contenido weddinglist-entrada__contenido__fila__2 {">
+                <h4 class="no-margin">Televisor</h4>
+                <p>Ayúdanos a acurrucarnos para ver nuestra serie favorita. Prometemos pensar en ti durante la introducción de cada episodio...</p>
+            </div>
+            <div class="form-check form-check-block mt-3 weddinglist-entrada__check__fila__2">
+                <input class="form-check-input mt-3 " type="checkbox" value="" id="gift2" >
+                <label class="form-check-label" for="gift2">
+                    <p>&nbsp;Yo me encargo... &#128526;</p>
+                </label>
             </div>
         </article>
 
-        <article class="entrada contenido-principal-col1">
-            <div class="entrada__imagen">
+                <article class="entrada entrada contenido-principal-lista">
+            <div class="entrada__imagen weddinglist-entrada__imagen__fila__3 ">
                 <picture>
-                    <source loading="lazy" srcset="img/disco-ball-3426765_1920.webp" type="image/webp">
-                    <img alt="imagen blog" loading="lazy" src="img/disco-ball-3426765_1920.jpg">
+                    <source loading="lazy" srcset="img/banco.webp" type="image/webp">
+                    <img alt="imagen blog" loading="lazy" src="img/banco.jpg">
                 </picture>
             </div>
-
-            <div class="entrada__contenido">
-                <h4 class="no-margin">La noche es joven</h4>
-                <p>Para los más aventureros, tenemos preparada una sorpresa especial...
-                    Tendremos a nuestra disposción desde las 20:00 hasta la 01:00 la
-                    genial discoteca Bataplan</p>
-
+            <div class="entrada__contenido weddinglist-entrada__contenido__fila__3 {">
+                <h4 class="no-margin">Banco de jardín</h4>
+                <p>Nos encanta este banco de jardín porque nos recuerda al que nos sentamos el día
+                que nos conocimos</p>
+            </div>
+            <div class="form-check form-check-block mt-3 weddinglist-entrada__check__fila__3">
+                <input class="form-check-input mt-3 " type="checkbox" value="" id="gift3" >
+                <label class="form-check-label" for="gift3">
+                    <p>&nbsp;Yo me encargo... &#128526;</p>
+                </label>
             </div>
         </article>
     </main>
@@ -83,7 +97,7 @@
 <footer class="footer">
     <div class="contenedor">
         <div class="barra">
-            <<h1 class="logo logo__nombre no-margin centrar-texto">Nuestra<span
+            <<h1 class="logo logo__nombre no-margin centrar-texto">Lista de <span
                 class="logo__bold">Boda</span></h1>
         </div>
     </div>
