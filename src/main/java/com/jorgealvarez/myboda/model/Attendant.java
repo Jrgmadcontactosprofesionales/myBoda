@@ -18,9 +18,6 @@ public class Attendant {
     private String name;
 
     private String surname;
-
-    /*TODO: solucionar el parse del jason que llega en String a LocalDate
-        @DateFormat(pattern = "dd-MM-yyyy")*/
     private String dob;
 
     private String ph;

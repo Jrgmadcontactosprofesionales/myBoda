@@ -1,4 +1,4 @@
-/*TODO ELIMINAR LAS CLASES QUE SOBREN*/
+
 :root {
     --fontHeading: 'PT Sans', sans-serif;
     --fontParagraph: 'Open Sans', sans-serif;
@@ -279,9 +279,7 @@ grid-column: 2 / 3;
 
     }
 }
-.boton:hover {
-    cursor: pointer;
-}
+
 .boton--primario {
     background-color: var(--negro);
 }

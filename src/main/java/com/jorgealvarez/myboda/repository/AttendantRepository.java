@@ -7,12 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-//TODO: ¿crear repositorio genérico?
-/*
-TODO: Para los enum de status y de availability, habrá que poner un
- valor por defecto: poblema de usar el mismo satus para asistir y para pet. especiales?
-*/
 @Repository
-public interface AttendantRepository extends JpaRepository<Attendant, Integer>{
-    List <Attendant> findByloggedUserContaining(@Param("loggedUser") String loggedUser);
+public interface AttendantRepository extends JpaRepository<Attendant, Integer> {
+    List<Attendant> findByloggedUserContaining(@Param("loggedUser") String loggedUser);
 }
