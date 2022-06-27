@@ -29,7 +29,7 @@ public class Attendant {
 
     private String specialRequirement;
 
-    private Availability specialRequirementStatus;
+    private String specialRequirementStatus;
 
     private String loggedUser;
 
@@ -89,11 +89,11 @@ public class Attendant {
         this.specialRequirement = specialRequirement;
     }
 
-    public Availability getSpecialRequirementStatus() {
+    public String getSpecialRequirementStatus() {
         return specialRequirementStatus;
     }
 
-    public void setSpecialRequirementStatus(Availability specialRequirementStatus) {
+    public void setSpecialRequirementStatus(String specialRequirementStatus) {
         this.specialRequirementStatus = specialRequirementStatus;
     }
 

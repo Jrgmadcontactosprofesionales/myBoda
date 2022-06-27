@@ -11,27 +11,33 @@
 <div class="container">
     <h2>Modifica los datos del invitado</h2>
     <hr/>
-    <div class="row justify-content-center">
-        <form class="form-group form-inline" method="post" th:action="@{/guardar-cambios-invitado}"
+    <div class="form-group">
+        <form class="form-group " method="post" th:action="@{/guardar-cambios-invitado}"
               th:object="${attendant}">
-            <input class="form-control col-4 mb-4" placeholder="Nombre" th:field="*{name}"
-                   type="text"/>
-            <input class="form-control col-4 mb-4" placeholder="Apellidos" th:field="*{surname}"
-                   type="text"/>
-            <input class="form-control col-4 mb-4" placeholder="Fecha de nacimiento" th:field="*{dob}"
-                   type="date"/>
-            <input class="form-control col-4 mb-4" placeholder="Teléfono" th:field="*{ph}"
-                   type="text"/>
-            <select class="input-group form-control col-4 mb-4" name="attendingStatus">
-                <option disabled hidden selected value="">Asistencia</option>
+            <label for="name">Nombre</label>
+            <input class="form-control col-4 mb-4" id="name" placeholder="Nombre"
+                   th:field="*{name}" type="text"/>
+            <label for="surname">Apellidos</label>
+            <input class="form-control col-4 mb-4" id="surname" placeholder="Apellidos"
+                   th:field="*{surname}" type="text"/>
+            <label for="dob">Fecha de nacimiento</label>
+            <input class="form-control col-4 mb-4" id="dob" placeholder="Fecha de nacimiento"
+                   th:field="*{dob}" type="date"/>
+            <label for="ph">Teléfono</label>
+            <input class="form-control col-4 mb-4" id="ph" placeholder="Teléfono"
+                   th:field="*{ph}" type="text"/>
+            <label for="attendingStatus">Asistencia</label>
+            <select class="input-group form-control col-4 mb-4" id="attendingStatus" name="attendingStatus">
                 <option th:each="attendingStatusOpt : ${T(com.jorgealvarez.myboda.model.Status).values()}"
                         th:text="${attendingStatusOpt.displayValue}" th:value="${attendingStatusOpt}"></option>
             </select>
-            <input class="form-control col-4 mb-4" placeholder="Peticiones especiales" th:field="*{specialRequirement}"
-                   type="text"/>
-            <input class="form-control col-4 mb-4" placeholder="Estado de peticiones especiales"
-                   sec:authorize="hasRole('ROLE_ADMIN')"
-                   th:field="*{specialRequirementStatus}" type="text"/>
+            <label for="specialRequirement">Peticiones especiales</label>
+            <input class="form-control col-4 mb-4" id="specialRequirement" placeholder="Peticiones especiales"
+                   th:field="*{specialRequirement}" type="text"/>
+            <label for="specialRequirementStatus">Estado de peticiones especiales</label>
+            <input class="form-control col-4 mb-4" id="specialRequirementStatus"
+                   placeholder="Estado de peticiones especiales"
+                   sec:authorize="hasRole('ROLE_ADMIN')" th:field="*{specialRequirementStatus}" type="text"/>
             <input th:field="*{loggedUser}" type="hidden"/>
             <input th:field="*{id}" type="hidden"/>
             <div class="container">
