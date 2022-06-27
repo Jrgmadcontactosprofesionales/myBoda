@@ -27,7 +27,8 @@
             <input class="form-control col-4 mb-4" id="ph" placeholder="Teléfono"
                    th:field="*{ph}" type="text"/>
             <label for="attendingStatus">Asistencia</label>
-            <select class="input-group form-control col-4 mb-4" id="attendingStatus" name="attendingStatus">
+            <select class="input-group form-control col-4 mb-4" id="attendingStatus" name="attendingStatus"
+                    th:field="*{attendingStatus}">
                 <option th:each="attendingStatusOpt : ${T(com.jorgealvarez.myboda.model.Status).values()}"
                         th:text="${attendingStatusOpt.displayValue}" th:value="${attendingStatusOpt}"></option>
             </select>
