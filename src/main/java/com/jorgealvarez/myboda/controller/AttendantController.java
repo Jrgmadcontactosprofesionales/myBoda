@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import static com.jorgealvarez.myboda.service.getAuthorityService.isAdmin;
-import static com.jorgealvarez.myboda.service.loggedUserService.getLoggedUserService;
+import static com.jorgealvarez.myboda.service.AttendantService.getLoggedUserService;
+import static com.jorgealvarez.myboda.service.AttendantService.isAdmin;
 
 @Controller
 public class AttendantController {

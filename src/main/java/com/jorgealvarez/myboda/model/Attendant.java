@@ -19,7 +19,6 @@ public class Attendant {
 
     private String surname;
     private String dob;
-
     private String ph;
 
     private Status attendingStatus;
