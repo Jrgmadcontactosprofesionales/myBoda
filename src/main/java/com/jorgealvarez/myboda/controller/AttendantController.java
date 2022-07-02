@@ -15,7 +15,6 @@ import static com.jorgealvarez.myboda.service.AttendantService.isAdmin;
 
 @Controller
 public class AttendantController {
-    //TODO: ¿crear métodos genéricos?
     @Autowired
     private AttendantRepository attendantRepository;
 
@@ -53,8 +52,7 @@ public class AttendantController {
         modelAndView.addObject("attendant", attendant);
         return modelAndView;
     }
-
-    //TODO JORGE PEDRO: no funciona el método post. Dejado como put para salir del paso no se puede editar
+    
     @PostMapping("/guardar-cambios-invitado")
     public String saveEditedAttendant(@ModelAttribute Attendant attendant) {
         Attendant attendantTemp = attendantRepository.findById(attendant.getId()).get();
@@ -68,7 +66,7 @@ public class AttendantController {
         attendantRepository.save(attendantTemp);
         return "redirect:/invitados";
     }
-    
+
     @GetMapping("/eliminar-invitado")
     public String deleteAttendant(@RequestParam int attendantId) {
         attendantRepository.deleteById(attendantId);

@@ -3524,7 +3524,7 @@ $jscomp.polyfill("Array.prototype.find", function(k) {
                 sPrevious: "Siguiente"
             },
             sEmptyTable: "No data available in table",
-            sInfo: "Mostrando de _START_ a _END_ sobre _TOTAL_ filas en total",
+            sInfo: "Mostrando de _START_ a _END_ sobre _TOTAL_ invitados en total",
             sInfoEmpty: "Showing 0 to 0 of 0 entries",
             sInfoFiltered: "(filtered from _MAX_ total entries)",
             sInfoPostFix: "",
