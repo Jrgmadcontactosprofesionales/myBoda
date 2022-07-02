@@ -68,60 +68,7 @@ public class AttendantController {
         attendantRepository.save(attendantTemp);
         return "redirect:/invitados";
     }
-
-
-//    @PutMapping("/guardar-cambios-invitado/{attendantId}")
-//    public String saveEditedAttendant(@PathVariable("attendantId") int attendantId,
-//                                      @RequestBody Attendant attendant) {
-//        Attendant attendantTemp = attendantRepository.findById(attendantId).get();
-//        attendantTemp.setName(attendant.getName());
-//        attendantTemp.setSurname(attendant.getSurname());
-//        attendantTemp.setDob(attendant.getDob());
-//        attendantTemp.setPh(attendant.getPh());
-//        attendantTemp.setAttendingStatus(attendant.getAttendingStatus());
-//        attendantTemp.setSpecialRequirement(attendant.getSpecialRequirement());
-//        attendantTemp.setSpecialRequirementStatus(attendant.getSpecialRequirementStatus());
-//        attendantRepository.save(attendant);
-//        return "redirect:/asistentes";
-//    }
-
-
-//    @PutMapping("/guardar-cambios-invitado")
-//    public String saveEditedAttendant(@RequestBody Attendant attendant) {
-//        Attendant attendantTemp = attendantRepository.findById(attendant.getId()).get();
-//        attendantTemp.setName(attendant.getName());
-//        attendantTemp.setSurname(attendant.getSurname());
-//        attendantTemp.setDob(attendant.getDob());
-//        attendantTemp.setPh(attendant.getPh());
-//        attendantTemp.setAttendingStatus(attendant.getAttendingStatus());
-//        attendantTemp.setSpecialRequirement(attendant.getSpecialRequirement());
-//        attendantTemp.setSpecialRequirementStatus(attendant.getSpecialRequirementStatus());
-//        attendantRepository.save(attendant);
-//        return "redirect:/asistentes";
-//    }
-
-//    @PutMapping("/guardar-cambios-invitado/{attendantId}")
-//    public String saveEditedAttendant(@PathVariable(value = "attendantId") int attendantId, @Valid @RequestBody Attendant attendantNewDetails) throws ResourceNotFoundException {
-//        Attendant attendant = attendantRepository.findById(attendantId)
-//                .orElseThrow(() -> new ResourceNotFoundException("No se ha encontrado ningún asistente con este id :: " + attendantId));
-//        attendant.setName(attendantNewDetails.getName());
-//        attendant.setSurname(attendantNewDetails.getSurname());
-//        attendant.setDob(attendantNewDetails.getDob());
-//        attendant.setPh(attendantNewDetails.getPh());
-//        attendant.setAttendingStatus(attendantNewDetails.getAttendingStatus());
-//        attendant.setSpecialRequirement(attendantNewDetails.getSpecialRequirement());
-//        attendant.setSpecialRequirementStatus(attendantNewDetails.getSpecialRequirementStatus());
-//        attendantRepository.save(attendant);
-//        return "redirect:/asistentes";
-//    }
-
-//    @GetMapping("/guardar-cambios-invitado/{attendantId}")
-//    public String saveEditedAttendant(@RequestParam int attendantId, @RequestBody Attendant attendantNewDetails) {
-//        attendantRepository.save(attendantRepository.findById(attendantNewDetails.getId()).get());
-//        return "redirect:/asistentes";
-//    }
-
-
+    
     @GetMapping("/eliminar-invitado")
     public String deleteAttendant(@RequestParam int attendantId) {
         attendantRepository.deleteById(attendantId);
