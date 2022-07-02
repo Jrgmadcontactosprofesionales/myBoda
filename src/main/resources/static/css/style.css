@@ -88,9 +88,6 @@ img {
     text-align: center;
 }
 
-.right-texto {
-    text-align: right;
-}
 
 /** Header **/
  #wedding-header {
@@ -136,6 +133,10 @@ img {
     padding-top: 4rem;
 }
 
+.right-texto {
+    text-align: right;
+}
+
 .barra-footer {
     padding-top: 1rem;
 
@@ -152,7 +153,8 @@ img {
 @media (min-width: 768px) {
     .barra-footer {
         display: flex;
-        justify-content: space-between;
+        justify-content:right;
+        align-items: right;
      
     }
 }
@@ -291,12 +293,16 @@ grid-column: 2 / 3;
 
 .footer {
     background-color: var(--negro);
+    background-size: cover;
     margin-top: 4rem;
+   
 }
+
 
 .highlighted {
 
-color:#1708a3;
+color: #0077ff;
+font-weight: bold;
 
 }
 
